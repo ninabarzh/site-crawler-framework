@@ -105,6 +105,32 @@ See the docs/ directory for:
 - API documentation
 - Example crawlers
 
+## Debugging Quick Start
+    
+1. Configure:
+
+```yaml
+# config/frustration_levels.yaml
+parameter_warnings: ignore
+type_checker_arguments: surrender
+```
+    
+2. Run:
+
+```bash
+python -c "import asyncio; from site_crawler_framework import main; asyncio.run(main.run())"
+# (Yes, it's supposed to look like that)
+```
+
+## Debugging tips
+
+When all else fails:
+
+- Make coffee
+- Check indentation
+- Blame the type checker
+- Repeat
+
 ## License
 
 This project is Unlicensed - do whatever you want with it!
