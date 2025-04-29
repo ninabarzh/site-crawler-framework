@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=65.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["core", "config", "modules", "crawlers", "detectors"]
+
+[project]
+name = "site-crawler-framework"
+version = "0.1.0"
+description = "A modular, extensible web crawler framework with automatic site type detection"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "aiohttp>=3.8.0",
+    "beautifulsoup4>=4.11.0",
+    "PyYAML>=6.0",
+    "pdfplumber>=0.7.0",
+    "tldextract>=3.4.0",
+    "pydantic>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ninabarzh/site-crawler-framework"
+Documentation = "https://github.com/ninabarzh/site-crawler-framework/wiki"
+Repository = "https://github.com/ninabarzh/site-crawler-framework"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.20.0",
+    "pytest-cov>=3.0.0",
+    "mypy>=0.900",
+    "flake8>=4.0.0",
+    "pydantic-settings>=2.0.0",  # For advanced configuration if needed
+    "types-python-slugify>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = "--asyncio-mode=auto"

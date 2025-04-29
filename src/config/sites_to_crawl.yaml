@@ -1,0 +1,14 @@
+# List of sites to crawl with optional specific configurations
+sites:
+  - url: "https://example.com"
+    # type: "generic"  # Optional - if not specified, will be auto-detected
+    max_depth: 2  # Override global max_depth for this site
+    allowed_domains: ["example.com"]  # Restrict crawling to these domains
+
+  - url: "https://docs.example.org"
+    type: "sphinx"  # Force specific crawler type
+    include_pdf: true  # Sphinx-specific option
+
+  - url: "https://api.example.net"
+    type: "api"  # API-specific crawler
+    api_format: "json"  # Expected response format

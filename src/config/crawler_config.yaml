@@ -1,0 +1,19 @@
+# Global crawler configuration
+crawler:
+  max_depth: 3  # Maximum depth to crawl
+  request_timeout: 10  # Timeout in seconds
+  user_agent: "Mozilla/5.0 (compatible; SiteCrawlerFramework/1.0; +https://github.com/yourusername/site-crawler)"
+  concurrent_requests: 5  # Number of concurrent requests
+  retry_attempts: 3  # Number of retry attempts for failed requests
+  politeness_delay: 1.0  # Delay between requests in seconds
+
+storage:
+  output_dir: "./output"  # Directory to store crawled content
+  save_html: true  # Whether to save HTML content
+  save_pdf: true  # Whether to save PDF files
+  save_images: false  # Whether to save images
+
+logging:
+  level: "INFO"  # Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "crawler.log"  # Log file path
