@@ -96,14 +96,57 @@ class MyCustomCrawler(BaseCrawler):
 CRAWLER_REGISTRY.register("my_crawler", MyCustomCrawler)
 ```
 
-## Documentation (under construction)
+## Documentation Approach
 
-See the docs/ directory for:
+Since this is a configuration-driven framework rather than a traditional library with public API, documentation focuses on usage patterns and extension points:
 
-- Configuration reference
-- Extension guide
-- API documentation
-- Example crawlers
+### Configuration reference
+
+`docs/configuration.md` covers:
+
+- Core YAML structure
+- Available settings
+- Site-specific options
+- Environment variables
+
+### Extension guide
+
+`docs/extending.md` explains 
+
+1. How to add new crawlers:
+    - Inherit from BaseCrawler
+    - Implement required methods
+    - Register in CRAWLER_REGISTRY
+2. Creating detection strategies:
+    - Pattern matching rules
+    - Priority system
+    - Testing new detectors
+
+### Architectural overview
+
+`docs/architecture.md` describes:
+
+- Core component diagram
+- Data flow
+- Async operation model
+- Error handling approach
+
+### Example implementations
+
+`examples/` contains:
+
+- Basic WordPress crawler
+- PDF handler sample
+- Dynamic content scraper
+- Custom detection strategy
+
+### Why No Formal API?
+
+The framework operates through:
+
+1. Configuration files as primary interface
+2. Convention-over-codebase extension model
+3. Runtime composition rather than import-time integration
 
 ## Debugging Quick Start
     
