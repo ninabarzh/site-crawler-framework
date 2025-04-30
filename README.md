@@ -75,34 +75,13 @@ Run:
 python -m site_crawler_framework
 ```
 
-## Extending the framework
-
-To add a new crawler:
-
-1. Create a crawler class in crawlers/:
-
-```python
-from .base import BaseCrawler
-
-class MyCustomCrawler(BaseCrawler):
-    async def crawl(self):
-        # Your custom crawling logic
-```
-    
-2. (Optional) Create a detection strategy in detectors/strategies/
-3. Register your crawler in main.py:
-
-```python
-CRAWLER_REGISTRY.register("my_crawler", MyCustomCrawler)
-```
-
-## Documentation Approach
+## Documentation approach
 
 Since this is a configuration-driven framework rather than a traditional library with public API, documentation focuses on usage patterns and extension points:
 
 ### Configuration reference
 
-`docs/configuration.md` covers:
+[docs/configuration.md]() covers:
 
 - Core YAML structure
 - Available settings
@@ -111,7 +90,7 @@ Since this is a configuration-driven framework rather than a traditional library
 
 ### Extension guide
 
-`docs/extending.md` explains 
+[docs/extending.md]() explains 
 
 1. How to add new crawlers:
     - Inherit from BaseCrawler
@@ -124,25 +103,16 @@ Since this is a configuration-driven framework rather than a traditional library
 
 ### Architectural overview
 
-`docs/architecture.md` describes:
+[docs/architecture.md]() describes:
 
 - Core component diagram
 - Data flow
 - Async operation model
 - Error handling approach
 
-### Example implementations
-
-`examples/` contains:
-
-- Basic WordPress crawler
-- PDF handler sample
-- Dynamic content scraper
-- Custom detection strategy
-
 ### Why No Formal API?
 
-The framework operates through:
+[docs/why-no-api.md]() explains the design philosopy, if you can call it that. The framework operates through:
 
 1. Configuration files as primary interface
 2. Convention-over-codebase extension model
