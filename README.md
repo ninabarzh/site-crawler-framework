@@ -81,7 +81,7 @@ Since this is a configuration-driven framework rather than a traditional library
 
 ### Configuration reference
 
-[docs/configuration.md]() covers:
+[docs/configuration.md](docs/configuration.md) covers:
 
 - Core YAML structure
 - Available settings
@@ -90,7 +90,7 @@ Since this is a configuration-driven framework rather than a traditional library
 
 ### Extension guide
 
-[docs/extending.md]() explains 
+[docs/extending.md](docs/extending.md) explains 
 
 1. How to add new crawlers:
     - Inherit from BaseCrawler
@@ -103,7 +103,7 @@ Since this is a configuration-driven framework rather than a traditional library
 
 ### Architectural overview
 
-[docs/architecture.md]() describes:
+[docs/architecture.md](docs/architecture.md) describes:
 
 - Core component diagram
 - Data flow
@@ -112,7 +112,7 @@ Since this is a configuration-driven framework rather than a traditional library
 
 ### Why No Formal API?
 
-[docs/why-no-api.md]() explains the design philosopy, if you can call it that. The framework operates through:
+[docs/why-no-api.md](docs/why-no-api.md) explains the design philosopy, if you can call it that. The framework operates through:
 
 1. Configuration files as primary interface
 2. Convention-over-codebase extension model

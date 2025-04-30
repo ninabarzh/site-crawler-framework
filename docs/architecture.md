@@ -1,6 +1,10 @@
 # Architectural Overview
 
 ```mermaid
+  info
+```
+
+```mermaid
 graph TD
     A[Config Loader] --> B[Crawler Manager]
     B --> C[Detection System]
