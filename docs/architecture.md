@@ -1,14 +1,10 @@
-# Architectural Overview
-
-```mermaid
-  info
-```
+# Architectural overview
 
 ```mermaid
 graph TD
     A[Config Loader] --> B[Crawler Manager]
     B --> C[Detection System]
-    C --> D[WordPress Crawler]
+    C --> D[Sphinx Crawler]
     C --> E[PDF Handler]
     C --> F[Custom Crawlers]
     B --> G[Content Pipeline]
